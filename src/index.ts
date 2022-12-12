@@ -10,6 +10,7 @@ function showImages() {
     navbar: false,
     title: false,
     initialCoverage: 1,
+    loop: false,
   });
 }
 
