@@ -16,6 +16,8 @@ function showImages() {
 
 async function main() {
   let imgs = $('div.figure_wrapper>img');
+  let title = $('header.tl_article_header>h1').text();
+  console.log(title);
   
   $('div.tl_page_wrap').remove();
   let viewer_div = document.createElement('div');
@@ -31,6 +33,12 @@ async function main() {
     img.setAttribute('id', 'image');
     viewer_ul.append(li);
   }
+
+  let header = document.createElement('h1');
+  header.innerText = title;
+  header.setAttribute('id', 'title');
+
+  viewer_div.append(header);
   viewer_div.append(viewer_ul);
   $('body').append(viewer_div);
 
